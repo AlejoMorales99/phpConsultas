@@ -99,7 +99,7 @@ require_once 'plantilla/cabecera.php'
       </div>
     </div>
       </div>
-
+ejemplos
 <!-- FIN DEL CONTENIDO -->
 
       <?php
