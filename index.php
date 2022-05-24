@@ -49,8 +49,9 @@
                             <a class="nav-link" href="#"><i class="bi bi-people-fill"></i> Contacto</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#frmLogin"><i class="bi bi-key-fill"></i> Login</a>
-<!--                             <a class="nav-link" href="panel.php"><i class="bi bi-key-fill"></i> Login</a> -->                        </li>
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#frmLogin"><i class="bi bi-key-fill"></i> Login</a>
+                            <!--                             <a class="nav-link" href="panel.php"><i class="bi bi-key-fill"></i> Login</a> -->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -156,7 +157,7 @@
 
 
         <!-- Button trigger modal -->
-        
+
 
         <!-- Modal -->
         <div class="modal fade" id="frmLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -167,21 +168,27 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    <div class="mb-3">
-                            <label for="Usuario" class="form-label">usuario</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="usuarioHelp">
-                            <div id="usuariolHelp" class="form-text">Ingrese su usuario registrado en el sistema</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="Password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password">
-                        </div>
-                        <a href="frmRegistroPaciente.php">¿Aún no tiene cuenta? Regístrese aquí</a>
+
+                        <form action="app/validarIngresoPaciente.php" method="post">
+                            <div class="mb-3">
+                                <label for="Usuario" class="form-label">usuario</label>
+                                <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="usuarioHelp">
+                                <div id="usuariolHelp" class="form-text">Ingrese su usuario registrado en el sistema</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <a href="frmRegistroPaciente.php">¿Aún no tiene cuenta? Regístrese aquí</a>
+
+                            <div class="modal-footer">
+                                <input type="reset" class="btn btn-secondary" data-bs-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-primary" value="Enviar">
+                            </div>
+                        </form>
+
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
-                    </div>
+
                 </div>
             </div>
         </div>

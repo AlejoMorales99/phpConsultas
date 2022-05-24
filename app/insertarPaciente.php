@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'bd.php'; //incluyo la cadena de conexión PHP
 
 //Recibimos la data del formulario
@@ -25,7 +25,16 @@ $sql = 'INSERT INTO paciente
 $sentencia = $pdo->prepare($sql);   //Prepara la consulta
 $sentencia->execute([$nombre,$apellidos,$email,$telefono,$password,$movil,$eps,$usuario,$fecha]);
 
-session_start();
-$_SESSION['inser'] = "session exitosa!";
+if($sentencia->rowCount()>0){
+  
+  $_SESSION['tipo'] = "success";
+  $_SESSION['mensaje'] = "Operacion exitosa";
+
+}else{
+  $_SESSION['tipo'] = "danger";
+  $_SESSION['mensaje'] = "ha ocurrido un error en la insercion";
+}
+
+
 
 header('Location:../frmRegistroPaciente.php');

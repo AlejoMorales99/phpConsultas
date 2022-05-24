@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php 
+session_start(); 
+error_reporting();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -60,14 +63,20 @@
 
         <div class="row">
             <div class="col-md-5 mx-3">
+
+                <div class="alert alert-<?php echo $_SESSION['tipo'];?> alert-dismissible fade show" role="alert">
+                    <?php 
+                    echo $_SESSION['mensaje'];
+                    session_unset();?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
                 <div class="card-body mt-3">
                     <h3 class="card-title">Registro de Pacientes</h3>
 
-                    <?php echo $_SESSION['inser']?>
-
                     <form action="app/insertarPaciente.php" method="POST">
 
-                        
+
                         <div class="mb-3">
                             <label for="Nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="nombre">
@@ -94,35 +103,35 @@
                         </div>
                 </div>
             </div>
-        
 
 
-        <div class="col-md-5">
+
+            <div class="col-md-5">
                 <div class="card-body mt-3">
 
-                        <div class="mb-3">
-                            <label for="fecha_nace" class="form-label">fecha de Nacimiento</label>
-                            <input type="date" class="form-control" name="fechaNace" id="fecha_nace">
-                        </div>
+                    <div class="mb-3">
+                        <label for="fecha_nace" class="form-label">fecha de Nacimiento</label>
+                        <input type="date" class="form-control" name="fechaNace" id="fecha_nace">
+                    </div>
 
-                        <div class="mb-3">
-                            <label for="E.P.S." class="form-label">E.P.S.</label>
-                            <input type="text" class="form-control" name="eps" id="E.P.S.">
-                        </div>
+                    <div class="mb-3">
+                        <label for="E.P.S." class="form-label">E.P.S.</label>
+                        <input type="text" class="form-control" name="eps" id="E.P.S.">
+                    </div>
 
-                        <div class="mb-3">
-                            <label for="usuarioPaciente" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" name="usuarioPaciente" id="usuarioPaciente">
-                        </div>
+                    <div class="mb-3">
+                        <label for="usuarioPaciente" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" name="usuarioPaciente" id="usuarioPaciente">
+                    </div>
 
-                        <div class="mb-3">
-                            <label for="passwordUsuario" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="passwordUsuario" id="passwordUsuario">
-                        </div>
+                    <div class="mb-3">
+                        <label for="passwordUsuario" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="passwordUsuario" id="passwordUsuario">
+                    </div>
 
-                        
-                        <button type="submit" class="btn btn-dark"><i class="bi bi-person-plus-fill"></i> Guardar</button>
-                        <button type="cancel" class="btn btn-dark"><i class="bi bi-x-square-fill"></i> Cancelar</button>
+
+                    <button type="submit" class="btn btn-dark"><i class="bi bi-person-plus-fill"></i> Guardar</button>
+                    <button type="cancel" class="btn btn-dark"><i class="bi bi-x-square-fill"></i> Cancelar</button>
                     </form>
                 </div>
             </div>
@@ -134,37 +143,37 @@
 
 
         <div class="row mt-5 p-5 bg-dark">
-                <div class="col-md-6 text-light">
-                    <i class="bi bi-hospital-fill"></i>
-                    Cra 100 con 98 <br>
-                    Edificio la ceiba<br>
-                    Cali - Valle
-                </div>
-                <div class="col-md-6 text-light">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+            <div class="col-md-6 text-light">
+                <i class="bi bi-hospital-fill"></i>
+                Cra 100 con 98 <br>
+                Edificio la ceiba<br>
+                Cali - Valle
             </div>
+            <div class="col-md-6 text-light">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
 
     </div>
 
 
 
-    
+
 
     <!-- Fin contenedor principal -->
     </div>

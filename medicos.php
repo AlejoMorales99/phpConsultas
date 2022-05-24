@@ -62,7 +62,7 @@ require_once 'plantilla/cabecera.php'
           <tr>
             <td><?php echo $datos->id_medico  ?></td>
             <td><?php echo $datos->nombre_medico  ?></td>
-            <td><?php echo $datos->apellidos_medico  ?></td>
+            <td><?php echo $datos->apellido_medico  ?></td>
             <td><?php echo $datos->email  ?></td>
             <td><?php echo $datos->especialidad  ?></td>
             <td><a href="frmEditar.php  ?id=<?php echo $datos->id_medico ?>" type="button" class="btn btn-dark"><i class="bi bi-pencil-square"></i></a></td>
