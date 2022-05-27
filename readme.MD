@@ -36,3 +36,9 @@ me sirven para configuar el servidor web (apache)oojo: existe otro servidor y es
 # segundo sprint 24/05/2022
 
 libreria de reportes en pdf fpdf
+registro de citas (llaves comppuestas)
+
+listar los medicos por especialidad
+imprimir cita
+listar la historia clinica por cada paciente
+actualizar perfil

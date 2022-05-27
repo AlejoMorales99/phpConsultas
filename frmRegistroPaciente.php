@@ -1,5 +1,5 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 error_reporting();
 ?>
 <!doctype html>
@@ -64,10 +64,10 @@ error_reporting();
         <div class="row">
             <div class="col-md-5 mx-3">
 
-                <div class="alert alert-<?php echo $_SESSION['tipo'];?> alert-dismissible fade show" role="alert">
-                    <?php 
+                <div class="alert alert-<?php echo $_SESSION['tipo']; ?> alert-dismissible fade show" role="alert">
+                    <?php
                     echo $_SESSION['mensaje'];
-                    session_unset();?>
+                    ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
