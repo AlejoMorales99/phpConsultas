@@ -30,6 +30,9 @@
             </div>
         </div>
         <!-- NAVBAR**************************************************** -->
+
+        
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">:::</a>
@@ -52,6 +55,11 @@
                             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#frmLogin"><i class="bi bi-key-fill"></i> Login</a>
                             <!--                             <a class="nav-link" href="panel.php"><i class="bi bi-key-fill"></i> Login</a> -->
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#medico" href="#"><i class="bi bi-people-fill"></i>Medico</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -193,12 +201,52 @@
             </div>
         </div>
 
+
+        <div class="modal fade" id="medico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login del Sistema de medicos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="app/validarIngresoMedico.php" method="post">
+                            <div class="mb-3">
+                                <label for="Usuario" class="form-label">usuario</label>
+                                <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="usuarioHelp">
+                                <div id="usuariolHelp" class="form-text">Ingrese su usuario registrado en el sistema</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            
+
+                            <div class="modal-footer">
+                                <input type="reset" class="btn btn-secondary" data-bs-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-primary" value="Enviar">
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
         <!-- Cierra modal Login -->
 
         <!-- Fin contenedor principal -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+
+    
+
 </body>
 
 </html>
+
+

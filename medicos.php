@@ -38,6 +38,11 @@ require_once 'plantilla/cabecera.php'
                 <input type="text" class="form-control" name="especialidad" id="especialidad">
               </div>
 
+              <div class="mb-3">
+                <label for="especialidad" class="form-label">contraseña</label>
+                <input type="text" class="form-control" name="contraseña" id="contraseña">
+              </div>
+
               
               <button type="submit" class="btn btn-dark"><i class="bi bi-person-plus-fill"></i></button>
             </form>
@@ -51,13 +56,15 @@ require_once 'plantilla/cabecera.php'
               <th scope="col">ID</th>
               <th scope="col">Nombre</th>
               <th scope="col">Apellidos</th>
-              <th scope="col">Móvil</th>
+              <th scope="col">correo</th>
+              <th scope="col">especialidad</th>
+              <th scope="col">contraseña</th>
             </tr>
           </thead>
           <tbody>
             <?php
             require_once 'app/listarMedicos.php';
-            foreach ($resultado as $datos) {
+            foreach ($medicos as $datos) {
               ?>
           <tr>
             <td><?php echo $datos->id_medico  ?></td>
@@ -65,6 +72,7 @@ require_once 'plantilla/cabecera.php'
             <td><?php echo $datos->apellido_medico  ?></td>
             <td><?php echo $datos->email  ?></td>
             <td><?php echo $datos->especialidad  ?></td>
+            <td><?php echo $datos->contraseña  ?></td>
             <td><a href="frmEditar.php  ?id=<?php echo $datos->id_medico ?>" type="button" class="btn btn-dark"><i class="bi bi-pencil-square"></i></a></td>
             <td><a href="app/eliminarMedico.php?id_medico=<?php echo $datos->id_medico ?>" type="button" class="btn btn-dark"><i class="bi bi-trash2-fill"></i></a></td>
           </tr>

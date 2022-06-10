@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'bd.php'; //incluyo la cadena de conexión PHP
-error_reporting('E_ALL'); // activa el despliegue de errores para programador
+ // activa el despliegue de errores para programador
 
 //Recibimos la data del formulario
 

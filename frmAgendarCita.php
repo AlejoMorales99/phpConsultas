@@ -1,5 +1,9 @@
 <?php
+error_reporting(0);
+session_reset();
 session_start();
+
+
 require_once 'plantilla/cabeceraP.php';
 require_once 'app/listarMedicos.php';
 //var_dump($medicos);
